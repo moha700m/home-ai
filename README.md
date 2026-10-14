@@ -10,10 +10,16 @@
 curl -fsSL https://raw.githubusercontent.com/moha700m/home-ai/main/install.sh | bash
 ```
 
-**Windows (PowerShell):**
+**Windows (PowerShell) — الطريقة الموثوقة:**
 
 ```powershell
-irm https://raw.githubusercontent.com/moha700m/home-ai/main/install.ps1 | iex
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing https://raw.githubusercontent.com/moha700m/home-ai/main/install.ps1 -OutFile $env:TEMP\home-ai-install.ps1; & $env:TEMP\home-ai-install.ps1"
+```
+
+أو المختصر (bootstrap):
+
+```powershell
+irm https://raw.githubusercontent.com/moha700m/home-ai/main/install-win.ps1 | iex
 ```
 
 بعدها:
